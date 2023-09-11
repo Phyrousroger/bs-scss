@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+
+    }
+
+        form{
+            display: flex;
+            height: 100vh;
+            color: #D3AD7F;
+            /*background-color: palegreen;*/
+            justify-content: center;
+            align-items: center;
+
+        }
+        form input{
+            margin-left: 30px;
+            /*opacity: 0;*/
+        }
+
+    </style>
+</head>
+<body>
+<form class="">
+    <input type="radio" name="color" value="red">
+    RED
+    <input type="radio" name="color" value="green">
+    GREEN
+    <input type="radio" name="color" value="blue">
+    BLUE
+</form>
+
+<script>
+    let radio=document.getElementsByName('color');
+
+    
+    for(let i=0;i<radio.length;i++){
+
+        radio[i].addEventListener('click',function (){
+
+            let target=document.body;
+            target.style.backgroundColor=radio[i].value;
+        })
+    }
+
+</script>
+</body>
+</html>

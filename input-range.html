@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input[type="range" i] {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="range" id="app" />
+    <span id="add">0</span>
+
+    <script>
+      let app = document.getElementById("app");
+      let add = document.getElementById("add");
+      app.value = 0;
+      setInterval(() => {
+        app.value++;
+        add.innerText = app.value;
+      }, 100);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+@import "../node_modules/animate.css/animate.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Kanit:ital,wght@1,100&family=Roboto:wght@300&display=swap");
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+
+body {
+  height: 500vh;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(
+    to right,
+    rgb(15, 32, 39),
+    rgb(32, 58, 67),
+    rgb(44, 83, 100)
+  );
+}
+
+.nav-text a {
+  color: #ffffff;
+}
+
+.nav-text .dropdown-menu {
+  background-color: #2c5364ff;
+}
+.nav-text:first-child {
+  font-family: "Courgette", cursive;
+}
+.Create_text {
+  font-family: "Nunito", sans-serif;
+}
+.Create_text h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.web-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 255px;
+  height: 355px;
+  border-radius: 1em;
+  background: linear-gradient(50deg, #2a5a3b, #1e4886);
+  overflow: hidden;
+}
+//.iconion{
+//  box-sizing: border-box;
+//  background: black;
+//  border-radius: 10px;
+//  padding: 10px;
+//  margin-bottom: 10px;
+//}
+.web-container:before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 35px;
+  top: 0;
+  right: 35px;
+  transition: 1.9s;
+  background: linear-gradient(50deg, #00ff59, #02b3ff);
+  transform: rotate(-45deg) translate(0, -100px);
+}
+.web-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*place-items: center;*/
+  width: 247px;
+  height: 347px;
+  background: #171614;
+  border-radius: 0.8em;
+  z-index: 1;
+  color: #858585;
+  overflow: hidden;
+  padding: 1em;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.container {
+  margin-top: 100px;
+}
+.web-card:hover {
+  color: #f5f5;
+}
+
+.web-container:hover::before {
+  animation: effect 1.9s;
+}
+@keyframes effect {
+  100% {
+    transform: rotate(-45deg) translate(0, 450px);
+  }
+}
+
+div i {
+  font-size: 24px;
+}
+
+.rose-img {
+  width: 400px;
+}
+
+.rose-img:first-child {
+  opacity: 30%;
+}
+.rose-img:last-child {
+  transform: translate(45px, -100px);
+}

@@ -1,0 +1,16 @@
+
+
+$secondary: #dee1ec;
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+header img{
+  width:50px;
+  height: 40px;
+}
+.dotted{
+  padding: 5px;
+  height:10px;
+  width: 10px;
+  border-radius: 50%;
+}

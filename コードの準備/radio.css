@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+
+    height: 100vh;
+    display: flex;
+    background-color: #00FFFFFF;
+    justify-content: center;
+    align-items: center;
+}
+.app{
+    width: 300px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow:0 5px 12px -6px #1a1a68;
+    position: relative;
+    font-family: sans-serif;
+}
+.app::before{
+    content: '';
+    height: 30px;
+    width: 90%;
+    position: absolute;
+    bottom: -60px;
+    left: 22px;
+    background-color: #7e7ea5;
+    border-radius: 50%;
+    filter: blur(15px);
+}
+.paper-title{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    border-bottom: 1px solid #7e7ea5;
+}
+.hide-box{
+    display: none;
+}
+form{
+    display: flex;
+    justify-content: space-around;
+    row-gap: 20px;
+    width: 100%;
+    flex-flow: wrap;
+}
+.lbl-radio{
+    width: 45%;
+    text-align: center;
+    padding: 20px 0;
+    /* position: relative; */
+    border: 1px solid #7e7ea5;
+    border-radius: 20px;
+    box-shadow: 2px 2px 0 0 #a0a0af;
+}
+.size{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.price{
+    margin-top: 10px;
+    color: #cccccc;
+    /*font-weight: lighter;*/
+}
+input[type=radio]:checked + .lbl-radio{
+    background-color: grey;
+    color: white;
+}

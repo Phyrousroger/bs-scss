@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        background-color: red;
+        color: white;
+        padding: 10px 20px;
+        outline: none;
+        border: none;
+        font-weight: bold;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+      
+    }
+    button::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-color: blueviolet;
+        z-index: -1;
+        transform: scaleY(0);
+        transition:transform 300ms;
+        transform-origin:bottom;
+    }
+    .btn{
+        position: relative;
+        display: inline-flex;
+        /* padding: 20px 40px; */
+        background-color: red;
+        color: white;
+        overflow: hidden;
+        margin: 10px;
+
+    }
+    .btn::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translate(-50%,-50%);
+        width: 0;
+        height: 0;
+        /* border-radius: 50%; */
+
+        background-color: blueviolet;
+        transition: width 0.5s height 0.5s;
+
+    }
+    .btn:hover::before{
+        width: 400px;
+        height:400px;
+        transition: 0.5s;
+        /* transform: rotate(90deg); */
+    }
+    button:hover:before{
+        transform: scaleY(1);
+    }
+</style>
+<body>
+    
+
+    <button>Click me</button>
+
+
+    <button class="btn">Subscribe</button>
+</body>
+</html>

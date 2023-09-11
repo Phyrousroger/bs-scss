@@ -1,0 +1,92 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/animate.css/animate.min.css";
+.h-500 {
+  height: 500px;
+}
+.conor {
+  position: relative;
+  border: 50px solid black;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  display: inline-block;
+}
+.conor-icon {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  bottom: 5px;
+  right: 10px;
+}
+.stack-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+  position: absolute;
+  border-radius: $border-radius-xl;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  animation: zoomIn;
+
+  right: 0;
+  //bottom: 0;
+  left: 0;
+  margin: auto;
+
+  transform: rotate(335deg) rotateY(50deg) rotateX(45deg);
+}
+
+@for $i from 0 to 5 {
+  .stack-img:nth-child(#{$i + 1}) {
+    top: #{30 * $i}px;
+    z-index: #{5-$i};
+    animation-duration: #{1+ ($i + 0.1)}s;
+  }
+}
+.sar h2 {
+  animation-name: fadeInRight;
+  animation-duration: 1s;
+}
+.sar p {
+  animation-name: fadeInRight;
+  animation-duration: 1.1s;
+}
+//@keyframes write {
+//  from{
+//    transform: translate(500px);
+//  }
+//  to{
+//  transform: translate(50px);
+//  }
+//
+//}
+
+//.stack-img:nth-child(1){
+//  top: 0;
+//  z-index:5;
+//}
+//.stack-img:nth-child(2){
+//top: 15px;
+//  z-index: 4;
+//}
+//.stack-img:nth-child(3){
+//top: 30px;
+//  z-index: 3;
+//}
+//.stack-img:nth-child(4){
+//top: 45px;
+//  z-index: 2;
+//}
+//.stack-img:nth-child(5){
+//top: 60px;
+//  z-index: 1;
+//}
+
+//.conor{
+//  position: relative;
+//  border: 50px solid black;
+//  border-right-color: transparent;
+//  border-bottom-color: transparent;
+//  display:inline-block;
+//}
